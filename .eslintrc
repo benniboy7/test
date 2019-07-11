@@ -1,0 +1,32 @@
+{
+  "env": { "browser": true }, // do not trip on browser globals, e.g. window, document..
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "globals": {
+    "iPad": true,
+    "fetch": true,
+    "Segment": true
+  },
+  "parser": "babel-eslint",
+  "plugins": ["prettier"], // apply prettier through ESLint
+  "rules": {
+    "prettier/prettier": [
+      "warn",
+      {
+        "printWidth": 100,
+        "singleQuote": true,
+        "trailingComma": "es5"
+      }
+    ],
+    "strict": 0, // for babel-eslint
+
+    "react/forbid-prop-types": "off",
+    "react/require-default-props": "off",
+    "import/first": "off",
+    "import/extensions": "off",
+    "no-nested-ternary": "off",
+    "no-param-reassign": "off"
+  },
+  "settings": {
+    "import/resolver": "webpack"
+  }
+}
