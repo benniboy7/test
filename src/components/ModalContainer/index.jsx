@@ -45,7 +45,7 @@ export default class ModalContainer extends React.Component {
       
   render() {
     const { children, col, onClose } = this.props;
-
+const { name, email, message } = this.state;
     return (
       <Container>
         <BodyStyled />
