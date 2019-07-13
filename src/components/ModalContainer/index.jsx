@@ -4,6 +4,12 @@ import { Grid, Row, Col } from 'react-styled-flexboxgrid';
 
 import { Container, Center, Content, CloseButton, BodyStyled, CloseIconStyled } from './styled';
 
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+  
 export default class ModalContainer extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
