@@ -55,7 +55,7 @@ export default class Index extends React.Component {
         <LearnMore first="rightTop" second="leftBottom" />
         <Types />
         <Video />
-        <Contact innerRef={c => (this.componentRefs.contact = c)} />
+        <Contact innerRef={c => (this.componentRefs.contactus = c)} />
         <LearnMore first="leftTop" second="none" />
         <Route path="/video" component={VideoModal} />
       </section>
