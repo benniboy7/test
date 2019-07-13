@@ -11,10 +11,7 @@ document.body.appendChild(container);
 
 function renderApp(Component) {
   render(
-    <AppContainer>
-      <Component />
-    </AppContainer>,
-    container
+`<div>test</div>`
   );
 }
 
