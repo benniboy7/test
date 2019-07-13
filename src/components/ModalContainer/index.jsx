@@ -10,7 +10,10 @@ export default class ModalContainer extends React.Component {
     onClose: PropTypes.func.isRequired,
     col: PropTypes.object,
   };
-this.state = { name: "", email: "", message: "" };
+  constructor(props) {
+      super(props);
+      this.state = { name: "", email: "", message: "" };
+    }
   static defaultProps = {
     col: { xs: 12 },
   };
@@ -42,7 +45,7 @@ this.state = { name: "", email: "", message: "" };
       };
 
       handleChange = e => this.setState({ [e.target.name]: e.target.value });
-      
+
   render() {
     const { children, col, onClose } = this.props;
 const { name, email, message } = this.state;
