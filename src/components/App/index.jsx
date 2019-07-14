@@ -60,13 +60,13 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <div>
-          {/*<Header />*/}
-          {/*<Switch>*/}
-            {/*<Route path={`/:type(${typesRegex})`} component={Type} />*/}
-            {/*<Route path="/:scroll(about|services|testimonials|contact)" component={Index} />*/}
+          <Header />
+          <Switch>
+            <Route path={`/:type(${typesRegex})`} component={Type} />
+            <Route path="/:scroll(about|services|testimonials|contact)" component={Index} />
             <Route path="/" component={Index} />
-          {/*</Switch>*/}
-          {/*<Footer />*/}
+          </Switch>
+          <Footer />
           <MobileQuote />
           <Route path="/meeting" component={MeetingModal} />
           <Route path={`/:type(${typesRegex})/meeting`} component={MeetingModal} />
