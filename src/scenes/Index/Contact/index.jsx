@@ -1,6 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Row, Col } from 'react-styled-flexboxgrid';
+import NetlifyForm from 'react-netlify-form'
 
 import {
   Container,
@@ -33,20 +34,28 @@ function Contact({ innerRef = () => {} }) {
             Santa Monica, CA 90401
             </TextContainer>
           </Col>
-          <form name="contact" method="post">
-                    <p>
-                      <label>Your Name: <input type="text" name="name"/></label>
-                    </p>
-                    <p>
-                      <label>Your Email: <input type="email" name="email"/></label>
-                    </p>
-                    <p>
-                      <label>Message: <textarea name="message"></textarea></label>
-                    </p>
-                    <p>
-                      <button type="submit">Send</button>
-                    </p>
-                  </form>
+          <NetlifyForm name='Contact Form'>
+            {({ loading, error, success }) => (
+              <div>
+                {loading &&
+                  <div>Loading...</div>
+                }
+                {error &&
+                  <div>Your information was not sent. Please try again later.</div>
+                }
+                {success &&
+                  <div>Thank you for contacting us!</div>
+                }
+                {!loading && !success &&
+                  <div>
+                    <input type='text' name='Name' required />
+                    <textarea name='Message' required />
+                    <button>Submit</button>
+                  </div>
+                }
+              </div>
+            )}
+          </NetlifyForm>
         </Row>
       </GridStyled>
     </Container>
