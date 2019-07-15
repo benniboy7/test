@@ -264,35 +264,13 @@
 </head>
 <body>
 
-  <form name="quote" netlify netlify-honeypot="bot-field" hidden>
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
     <input type="hidden" name="form-name" value="contact" />
-     <ul>
-        <li>
-           <label class="desc">Registered Owner (s)</label>
            <input name="owner" type="text" class="text medium"/>
-        </li>
-        <li>
-           <label class="desc">Name:</label>
-           <span>
            <input type="text" name="ofname" />
-           <label class="desc">First</label>
-           </span>
-           <span>
-           <input type="text" name="olname"/>
-           <label class="desc">Last</label>
-           </span>
-        </li>
-        <li>
-           <label class="desc">Street Address:</label>
+           <input type="text" name="olname"/>         
            <input name="add" type="text" id="add" size="50"/>
-        </li>
-        <li>
-           <span>
-           <label class="desc">City</label>
-           <input type="text" name="city" id="city" />
-           </span>
-           <span>
-              <label class="desc">State:</label>
+          <label class="desc">City</label>
               <select name="state" id="state">
                  <option value="AL">AL</option>
                  <option value="AK">AK</option>
@@ -346,51 +324,15 @@
                  <option value="WI">WI</option>
                  <option value="WY">WY</option>
               </select>
-           </span>
-        </li>
-        <li>
-           <label class="desc">Zip Code:</label>
            <input type="text" name="zip" id="zip" />
-        </li>
-        <li>
-           <span>
-           <label class="desc">Work Phone:</label>
            <input type="text" name="wphone" id="wphone" />
-           </span>
-           <span>
-           <label class="desc">Home Phone:</label>
            <input type="text" name="hphone" id="hphone" />
-           </span>
-        </li>
-        <li>
-           <span>
-           <label class="desc">Email Address:</label>
            <input type="text" name="email" id="email" />
            </span>
-           <span>
-           <label class="desc">Fax Number:</label>
            <input type="text" name="fax" id="fax" />
-           </span>
-        </li>
-        <li>
-           &nbsp;
-           &nbsp;
-        </li>
-        <li>
-           <label class="desc">How did you hear about us?</label>
            <input name="hear" type="text" id="hear" size="50" />
-        </li>
-        <li>
-           <label class="desc">Occupation:</label>
            <input name="occ" type="text" id="occ" size="50" />
-        </li>
-        <li>
-           <label class="desc">Present Insurance Company:</label>
            <input name="ins" type="text" id="ins" size="50" />
-        </li>
-        <li>
-           <label class="desc">Expiration Date of Current Policy:</label>
-           <span>
               <select name="edmonth">
                  <option value="00"></option>
                  <option value="01">1 - January</option>
@@ -406,9 +348,7 @@
                  <option value="11">11 - November</option>
                  <option value="12">12 - December</option>
               </select>
-              <label class="desc">Month</label>
-           </span>
-           <span>
+
               <select name="edday">
                  <option value="00"></option>
                  <option value="01">1</option>
@@ -443,9 +383,7 @@
                  <option value="30">30</option>
                  <option value="31">31</option>
               </select>
-              <label class="desc">Day</label>
-           </span>
-           <span>
+
               <select name="edyear">
                  <option value="0000"></option>
                  <option value="2019">2019</option>
@@ -458,110 +396,39 @@
                  <option value="2026">2026</option>
                  <option value="2027">2027</option>
                  <option value="2028">2028</option>
-              </select>
-              <label class="desc">Year</label>
-           </span>
-        </li>
-        <li>
-           <label class="desc">Check this box if this is a new purchase:</label>
-           <input name="newPurchase" type="checkbox" value="Yes" />
-        </li>
-        <li>
-           <label class="desc">AOPA Member #:</label>
+              </select>         
+
+           <input name="newPurchase" type="checkbox" value="Yes" /> 
+
            <input name="aopa" type="text" id="aopa" size="20" />
-        </li>
-        <li>
-           <label class="desc">EAA Member #:</label>
-           <input name="eaa" type="text" id="eaa" size="20" />
-        </li>
-        <li>
-           <h2>Aircraft Insurance Quote</h2>
-        </li>
-        <li>
-           <label class="desc">N#:</label>
-           <input type="text" name="n" id="n" />
-        </li>
-        <li>
-           <label class="desc">Year:</label>
+         
+         <input name="eaa" type="text" id="eaa" size="20" />
+          <input type="text" name="n" id="n" />
            <input type="text" name="year" id="year"/>
-        </li>
-        <li>
-           <label class="desc">Make:</label>
            <input type="text" name="make" id="make" />
-        </li>
-        <li>
-           <label class="desc">Model:</label>
            <input type="text" name="amodel" />
-        </li>
-        <li>
-           <label class="desc">Total Seats:</label>
            <input type="text" name="seats" id="seats" />
-        </li>
-        <li>
-           <label class="desc">Insured Value:</label>
-           <span>$</span><span class="dollar"><input type="text" name="value" id="value" /></span>
-        </li>
-        <li>
-           <label class="desc">Base Airport Identifier:</label>
+            <input type="text" name="value" id="value" />
            <input name="id" type="text" id="id" size="10" />
-        </li>
-        <li>
-           <label class="desc">Base Airport Name:</label>
            <input name="airport" type="text" id="airport" size="50" />
-        </li>
-        <li>
-           <label class="desc">Method of Storage:</label>
-           <input type="radio" name="store" id="store" value="hangar" /> Hangared
-        </li>
-        <li>
-           <input type="radio" name="store" id="store2" value="tied" /> Tied Down
-        </li>
-        <li>
-           <label class="desc">Type of Use:</label>
-           <select name="use" class="select medium">
+           <input type="radio" name="store" id="store" value="hangar" />
+           <input type="radio" name="store" id="store2" value="tied" />
+         
+         <select name="use" class="select medium">
               <option value=""></option>
               <option value="Personal Pleasure and Business / Non Commercial">Personal Pleasure and Business / Non Commercial</option>
               <option value="Other">Other (Please advise details in the Comments section below)</option>
            </select>
-        </li>
-        <li>
-           <label class="desc">Lienholder:</label>
+         
            <input type="text" name="lien" id="lien" />
-        </li>
-        <li>
-           <label class="desc">Amount of Loan:</label>
-           <span>$</span><span class="dollar"><input type="text" name="loan" id="loan" /></span>
-        </li>
-        <li>
-           <label class="desc">Is Aircraft on floats?</label>
-           Yes <input type="radio" name="float" id="float" value="Yes" />
-           No <input type="radio" name="float" id="float" value="No" />
-        </li>
-        <li>
-        </li>
-        <li>
-           <h2>Pilot Information</h2>
-        </li>
-     </ul>
-     <div id="pilot-container" class="pilot-container">
-        <ul class="pilot">
-           
-           <li>
-              <label class="desc">First Name:</label>
-              <input type="text" name="fname[1]" />
-           </li>
-           <li>
-              <label class="desc">Last Name:</label>
+         
+         <input type="text" name="loan" id="loan" />
+         <input type="radio" name="float" id="float" value="Yes" />
+        <input type="radio" name="float" id="float" value="No" />
+          <input type="text" name="fname[1]" />
               <input type="text" name="lname[1]" />
-           </li>
-           <li>
-              <label class="desc">Age or DOB:</label>
-              <span>Age:</span>
-              <span><input type="text" name="age[1]" /></span>
-           </li>
-           <li>
-              <span>DOB:</span>
-              <span>
+          <input type="text" name="age[1]" />
+            
                  <select name="dobmonth[1]">
                     <option value="">Month</option>
                     <option value="01">1 - January</option>
@@ -577,8 +444,7 @@
                     <option value="11">11 - November</option>
                     <option value="12">12 - December</option>
                  </select>
-              </span>
-              <span>
+
                  <select name="dobday[1]">
                     <option value="">Day</option>
                     <option value="01">1</option>
@@ -613,8 +479,7 @@
                     <option value="30">30</option>
                     <option value="31">31</option>
                  </select>
-              </span>
-              <span>
+
                  <select name="dobyear[1]">
                     <option value="">Year</option>
                     <option value="2019">2019</option>
@@ -718,10 +583,7 @@
                     <option value="1921">1921</option>
                     <option value="1920">1920</option>
                  </select>
-              </span>
-           </li>
-           <li>
-              <label class="desc">License Type:</label>
+
               <select name="lic[1]" class="select small">
                  <option value="Student">Student</option>
                  <option value="Private">Private</option>
@@ -729,145 +591,71 @@
                  <option value="ATP">ATP</option>
                  <option value="Sport">Sport</option>
               </select>
-           </li>
-           <li>
-              <label class="desc">Ratings (Please choose all that apply):</label>
-              <input name="ifr[1]" type="checkbox" value="instrument" /> IFR
-           </li>
-           <li>
-              <input name="sea[1]" type="checkbox" value="sea" /> Sea
-           </li>
-           <li>
-              <input name="me[1]" type="checkbox" value="multiengine" /> Multi-engine
-           </li>
-           <li>
-              <input name="rotor[1]" type="checkbox" value="roto" /> Rotor
-           </li>
-           <li>
+            
+            
+              <input name="ifr[1]" type="checkbox" value="instrument" />
+                        
+              <input name="sea[1]" type="checkbox" value="sea" />
+            
+              <input name="me[1]" type="checkbox" value="multiengine" />
+            
+              <input name="rotor[1]" type="checkbox" value="roto" /> 
+            
+            
               <input name="cfi[1]" type="checkbox" value="cfi" /> CFI
-           </li>
-           <li>
-              <label class="desc">Any aviation accidents, waivers, violations, losses, incidents, DUI, DWI's?</label>
-              <input name="accidentsyesno[1]" type="radio" value="Yes" /> Yes
-              <input name="accidentsyesno[1]" type="radio" value="No" /> No 
-           </li>
-           <li>
-              <label class="desc">If yes, please advise the detail and remember to include the date of the loss and the amount paid out by the insurance company.</label>
+            
+              <input name="accidentsyesno[1]" type="radio" value="Yes" />
+              <input name="accidentsyesno[1]" type="radio" value="No" /> 
+            
+            
               <textarea name="accidents[1]" cols="45" rows="5"></textarea>
-           </li>
-           <li>
-              &nbsp;
-           </li>
-           
-           <li>
-              <label class="desc">Total Hours:</label>
+            
               <input type="text" name="total[1]" />
-           </li>
-           <li>
-              <label class="desc">In this model:</label>
+            
               <input type="text" name="model[1]" />
-           </li>
-           <li>
-              <label class="desc">Retractable Gear:</label>
+            
               <input type="text" name="retract[1]" />
-           </li>
-           <li>
-              <label class="desc">Multi-Engine:</label>
+            
               <input type="text" name="meh[1]" />
-           </li>
-           <li>
-              <label class="desc">Tailwheel:</label>
+            
               <input type="text" name="tw[1]" />
-           </li>
-           <li>
-              <label class="desc">Turboprop:</label>
-              <input type="text" name="tp[1]" />
-           </li>
-           <li>
-              <label class="desc">Turbine Jet:</label>
+            
+            <input type="text" name="tp[1]" />
               <input type="text" name="pj[1]" />
-           </li>
-           <li>
-              <label class="desc">Rotor:</label>
+            
               <input type="text" name="rot[1]" />
-           </li>
-           <li>
-              <label class="desc">Seaplane:</label>
+            
               <input type="text" name="seap[1]" />
-           </li>
-           <li>
-              <label class="desc">Other:</label>
               <input type="text" name="otherhours[1]" />
-           </li>
-           <li>
-              <label class="desc">Last 12 Months:</label>
               <input type="text" name="last12[1]" />
-           </li>
-           <li>
-              <label class="desc">Last School Attended in the Make and Model?</label>
               <input type="text" name="school[1]" />
-           </li>
-           <li>
-              <label class="desc">When?</label>
+            
               <input type="text" name="schoolWhen[1]" />
-           </li>
-           <li>
-              <label class="desc">Where?</label>
+            
               <input type="text" name="schoolWhere[1]" />
-           </li>
+            
            <input type="hidden" name="pilot[]" value="1" />
-        </ul>
-     </div>
-     <ul>
-        <li>
-           <h2>Coverages</h2>
-        </li>
-        <li>
-           <label class="desc">Liability Limits Requested:</label>
-        </li>
-        <li>
+         
            <input type="radio" name="coverage" id="radio" value="1/100" />
-           $1,000,000 Combined Single Limit including $100,000 per passenger
-        </li>
-        <li>
+         
            <input type="radio" name="coverage" id="radio2" value="1CSL" />
-           $1,000,000 Combined Single Limit with no passenger limitation
-        </li>
-        <li>
+         
+         
            <input type="radio" name="coverage" id="radio3" value="Other Liability Requested" />
-           Other (Specify)
-        </li>
-        <li>
-           &nbsp;
+         
            <input name="coverageOther" type="text" id="coverageOther" size="50" />
-        </li>
-        <li>
-           <label class="desc">All pilots above have a valid and effective pilot certificate:</label>
-           <input type="radio" name="valid" id="radio4" value="All Pilots have a valid pilot certificate" /> Yes
-           <input type="radio" name="valid" id="radio5" value="NO, Not All Pilots have a valid pilot certificate" /> No
-        </li>
-        <li>
-           <label class="desc">Do you own any other aircraft?</label>
-           <input type="radio" name="own" id="radio7" value="I own another aircraft." /> Yes
-           <input type="radio" name="own" id="radio6" value="No, I do not own another aircraft."  /> No
-        </li>
-        <li>
-        </li>
-        <li>
-           <h2>Comments</h2>
-        </li>
-        <li>
-           Please list any comments or questions here:
-        </li>
-        <li>
+         
+         
+           <input type="radio" name="valid" id="radio4" value="All Pilots have a valid pilot certificate" />
+           <input type="radio" name="valid" id="radio5" value="NO, Not All Pilots have a valid pilot certificate" />
+         
+         
+           <input type="radio" name="own" id="radio7" value="I own another aircraft." />
+           <input type="radio" name="own" id="radio6" value="No, I do not own another aircraft."  />
+         
            <textarea name="comments" id="comments" cols="45" rows="5"></textarea>
-        </li>
-        <li>
-           <button type="submit" name="button" id="button">Submit</button>
-        </li>
-     </ul>
   </form>
-  
+
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8G4DKF"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

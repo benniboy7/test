@@ -44,7 +44,7 @@ export default class ModalContainer extends React.Component {
                     <CloseIconStyled />
                   </CloseButton>
 
-                  <form name="quote" method="post">
+                  <form name="contact" method="post">
                     <input type="hidden" name="form-name" value="contact" />
                      <ul>
                         <li>
