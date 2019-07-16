@@ -7,6 +7,7 @@ import {
   GridStyled,
   Heading,
   Text,
+  Label,
   TextContainer,
 } from './styled';
 
@@ -20,17 +21,16 @@ function Contact({ innerRef = () => {} }) {
           <Col xs={12} md={6}>
             <TextContainer>
             <Heading>Contact Us</Heading>
-            Office Phone: 310-453-3355
+            Office Phone: <a href="tel:+1-310-453-3355"><Label>+1-310-453-3355</Label></a>
             <br/>
-            Email: Team@sunsetais.com
-            <br/>
+            Email: <Label>Team@sunsetais.com</Label>
             <br/>
 
-            Sunset Aviation Insurance Services, Inc.
+            <Label>Sunset Aviation Insurance Services, Inc.</Label>
             <br/>
-            312 Arizona Ave
+            <Label>312 Arizona Ave</Label>
             <br/>
-            Santa Monica, CA 90401
+            <Label>Santa Monica, CA 90401</Label>
             </TextContainer>
           </Col>
         </Row>

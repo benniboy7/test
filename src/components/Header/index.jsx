@@ -107,7 +107,6 @@ export default class Header extends React.Component {
               </NavList>
             </Navigation>
             <QuoteButtonStyled framePosition="right" />
-            <CallButtonStyled />
           </Inner>
         </Grid>
       </Container>

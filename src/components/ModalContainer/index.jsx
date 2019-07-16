@@ -43,36 +43,36 @@ export default class ModalContainer extends React.Component {
                   <CloseButton onClick={onClose}>
                     <CloseIconStyled />
                   </CloseButton>
-
                   <form name="contact" method="post">
+                  <label class="lbl ph">Phone #: <a href="tel:+1-310-453-3355">+1-310-453-3355</a></label>
                     <input type="hidden" name="form-name" value="contact" />
                      <ul>
                         <li>
-                           <label class="desc">Registered Owner (s)</label>
+                           <label class="lbl">Registered Owner (s)</label>
                            <input name="owner" type="text" class="text medium"/>
                         </li>
                         <li>
-                           <label class="desc">Name:</label>
+                           <label class="lbl">Name:</label>
                            <span>
-                           <input type="text" name="ofname" />
-                           <label class="desc">First</label>
+                           <input type="text" name="firstname" />
+                           <label class="lbl">First</label>
                            </span>
                            <span>
-                           <input type="text" name="olname"/>
-                           <label class="desc">Last</label>
+                           <input type="text" name="last_name"/>
+                           <label class="lbl">Last</label>
                            </span>
                         </li>
                         <li>
-                           <label class="desc">Street Address:</label>
-                           <input name="add" type="text" id="add" size="50"/>
+                           <label class="lbl">Street Address:</label>
+                           <input name="street_address" type="text" id="add" size="50"/>
                         </li>
                         <li>
                            <span>
-                           <label class="desc">City</label>
+                           <label class="lbl">City</label>
                            <input type="text" name="city" id="city" />
                            </span>
                            <span>
-                              <label class="desc">State:</label>
+                              <label class="lbl">State:</label>
                               <select name="state" id="state">
                                  <option value="AL">AL</option>
                                  <option value="AK">AK</option>
@@ -129,26 +129,26 @@ export default class ModalContainer extends React.Component {
                            </span>
                         </li>
                         <li>
-                           <label class="desc">Zip Code:</label>
+                           <label class="lbl">Zip Code:</label>
                            <input type="text" name="zip" id="zip" />
                         </li>
                         <li>
                            <span>
-                           <label class="desc">Work Phone:</label>
-                           <input type="text" name="wphone" id="wphone" />
+                           <label class="lbl">Work Phone:</label>
+                           <input type="text" name="work_phone" id="wphone" />
                            </span>
                            <span>
-                           <label class="desc">Home Phone:</label>
-                           <input type="text" name="hphone" id="hphone" />
+                           <label class="lbl">Home Phone:</label>
+                           <input type="text" name="home_phone" id="hphone" />
                            </span>
                         </li>
                         <li>
                            <span>
-                           <label class="desc">Email Address:</label>
+                           <label class="lbl">Email Address:</label>
                            <input type="text" name="email" id="email" />
                            </span>
                            <span>
-                           <label class="desc">Fax Number:</label>
+                           <label class="lbl">Fax Number:</label>
                            <input type="text" name="fax" id="fax" />
                            </span>
                         </li>
@@ -157,21 +157,21 @@ export default class ModalContainer extends React.Component {
                            &nbsp;
                         </li>
                         <li>
-                           <label class="desc">How did you hear about us?</label>
+                           <label class="lbl">How did you hear about us?</label>
                            <input name="hear" type="text" id="hear" size="50" />
                         </li>
                         <li>
-                           <label class="desc">Occupation:</label>
-                           <input name="occ" type="text" id="occ" size="50" />
+                           <label class="lbl">Occupation:</label>
+                           <input name="occupation" type="text" id="occ" size="50" />
                         </li>
                         <li>
-                           <label class="desc">Present Insurance Company:</label>
-                           <input name="ins" type="text" id="ins" size="50" />
+                           <label class="lbl">Present Insurance Company:</label>
+                           <input name="insurance" type="text" id="ins" size="50" />
                         </li>
                         <li>
-                           <label class="desc">Expiration Date of Current Policy:</label>
+                           <label class="lbl">Expiration Date of Current Policy:</label>
                            <span>
-                              <select name="edmonth">
+                              <select name="expiry_date_month">
                                  <option value="00"></option>
                                  <option value="01">1 - January</option>
                                  <option value="02">2 - February</option>
@@ -186,10 +186,10 @@ export default class ModalContainer extends React.Component {
                                  <option value="11">11 - November</option>
                                  <option value="12">12 - December</option>
                               </select>
-                              <label class="desc">Month</label>
+                              <label class="lbl">Month</label>
                            </span>
                            <span>
-                              <select name="edday">
+                              <select name="expiry_date_day">
                                  <option value="00"></option>
                                  <option value="01">1</option>
                                  <option value="02">2</option>
@@ -223,10 +223,10 @@ export default class ModalContainer extends React.Component {
                                  <option value="30">30</option>
                                  <option value="31">31</option>
                               </select>
-                              <label class="desc">Day</label>
+                              <label class="lbl">Day</label>
                            </span>
                            <span>
-                              <select name="edyear">
+                              <select name="expiry_date_year">
                                  <option value="0000"></option>
                                  <option value="2019">2019</option>
                                  <option value="2020">2020</option>
@@ -239,65 +239,65 @@ export default class ModalContainer extends React.Component {
                                  <option value="2027">2027</option>
                                  <option value="2028">2028</option>
                               </select>
-                              <label class="desc">Year</label>
+                              <label class="lbl">Year</label>
                            </span>
                         </li>
                         <li>
-                           <label class="desc">Check this box if this is a new purchase:</label>
-                           <input name="newPurchase" type="checkbox" value="Yes" />
+                           <input type="checkbox" value="Yes" id="new-yes"/>
+                           <label class="checkLable" for="new-yes">Check this box if this is a new purchase:</label>
                         </li>
                         <li>
-                           <label class="desc">AOPA Member #:</label>
-                           <input name="aopa" type="text" id="aopa" size="20" />
+                           <label class="lbl">AOPA Member #:</label>
+                           <input name="aopa_member" type="text" id="aopa" size="20" />
                         </li>
                         <li>
-                           <label class="desc">EAA Member #:</label>
-                           <input name="eaa" type="text" id="eaa" size="20" />
+                           <label class="lbl">EAA Member #:</label>
+                           <input name="eaa_member" type="text" id="eaa" size="20" />
                         </li>
                         <li>
                            <h2>Aircraft Insurance Quote</h2>
                         </li>
                         <li>
-                           <label class="desc">N#:</label>
+                           <label class="lbl">N#:</label>
                            <input type="text" name="n" id="n" />
                         </li>
                         <li>
-                           <label class="desc">Year:</label>
+                           <label class="lbl">Year:</label>
                            <input type="text" name="year" id="year"/>
                         </li>
                         <li>
-                           <label class="desc">Make:</label>
+                           <label class="lbl">Make:</label>
                            <input type="text" name="make" id="make" />
                         </li>
                         <li>
-                           <label class="desc">Model:</label>
+                           <label class="lbl">Model:</label>
                            <input type="text" name="amodel" />
                         </li>
                         <li>
-                           <label class="desc">Total Seats:</label>
-                           <input type="text" name="seats" id="seats" />
+                           <label class="lbl">Total Seats:</label>
+                           <input type="text" name="total_seats" id="seats" />
                         </li>
                         <li>
-                           <label class="desc">Insured Value:</label>
-                           <span>$</span><span class="dollar"><input type="text" name="value" id="value" /></span>
+                           <label class="lbl">Insured Value:</label>
+                           <span class="dlr">$</span><span class="dollar"><input type="text" name="value" id="value" /></span>
                         </li>
                         <li>
-                           <label class="desc">Base Airport Identifier:</label>
-                           <input name="id" type="text" id="id" size="10" />
+                           <label class="lbl">Base Airport Identifier:</label>
+                           <input name="base_airport_identifier" type="text" id="id" size="10" />
                         </li>
                         <li>
-                           <label class="desc">Base Airport Name:</label>
-                           <input name="airport" type="text" id="airport" size="50" />
+                           <label class="lbl">Base Airport Name:</label>
+                           <input name="base_airport_name" type="text" id="airport" size="50" />
                         </li>
                         <li>
-                           <label class="desc">Method of Storage:</label>
-                           <input type="radio" name="store" id="store" value="hangar" /> Hangared
+                           <label class="lbl">Method of Storage:</label>
+                           <input type="radio" name="store" id="store" value="hangar" /> <label for="store">Hangared</label>
                         </li>
                         <li>
-                           <input type="radio" name="store" id="store2" value="tied" /> Tied Down
+                           <input type="radio" name="store" id="store2" value="tied" /> <label for="store2">Tied Down</label>
                         </li>
                         <li>
-                           <label class="desc">Type of Use:</label>
+                           <label class="lbl">Type of Use:</label>
                            <select name="use" class="select medium">
                               <option value=""></option>
                               <option value="Personal Pleasure and Business / Non Commercial">Personal Pleasure and Business / Non Commercial</option>
@@ -305,17 +305,20 @@ export default class ModalContainer extends React.Component {
                            </select>
                         </li>
                         <li>
-                           <label class="desc">Lienholder:</label>
-                           <input type="text" name="lien" id="lien" />
+                           <label class="lbl">Lienholder:</label>
+                           <input type="text" name="lienholder" id="lien" />
                         </li>
                         <li>
-                           <label class="desc">Amount of Loan:</label>
-                           <span>$</span><span class="dollar"><input type="text" name="loan" id="loan" /></span>
+                           <label class="lbl">Amount of Loan:</label>
+                           <span class="dlr">$</span><span class="dollar"><input type="text" name="loan" id="loan" /></span>
                         </li>
                         <li>
-                           <label class="desc">Is Aircraft on floats?</label>
-                           Yes <input type="radio" name="float" id="float" value="Yes" />
-                           No <input type="radio" name="float" id="float" value="No" />
+                           <label class="lbl">Is Aircraft on floats?</label>
+                           <input type="radio" name="float" id="float-y" value="Yes" />
+                           <label for="float-y">Yes</label>
+                           <br/> 
+                           <input type="radio" name="float" id="float-n" value="No" />
+                           <label for="float-n">No</label> 
                         </li>
                         <li>
                         </li>
@@ -327,22 +330,22 @@ export default class ModalContainer extends React.Component {
                         <ul class="pilot">
                            
                            <li>
-                              <label class="desc">First Name:</label>
-                              <input type="text" name="fname[1]" />
+                              <label class="lbl">First Name:</label>
+                              <input type="text" name="pilot_fname" />
                            </li>
                            <li>
-                              <label class="desc">Last Name:</label>
-                              <input type="text" name="lname[1]" />
+                              <label class="lbl">Last Name:</label>
+                              <input type="text" name="pilot_lname" />
                            </li>
                            <li>
-                              <label class="desc">Age or DOB:</label>
-                              <span>Age:</span>
-                              <span><input type="text" name="age[1]" /></span>
+                              <label class="lbl">Age or DOB:</label>
+                              <span class="age-dob">Age:</span>
+                              <span><input type="text" name="pilot_age" /></span>
                            </li>
                            <li>
-                              <span>DOB:</span>
+                              <span class="age-dob">DOB:</span>
                               <span>
-                                 <select name="dobmonth[1]">
+                                 <select name="pilot_dob_month">
                                     <option value="">Month</option>
                                     <option value="01">1 - January</option>
                                     <option value="02">2 - February</option>
@@ -359,7 +362,7 @@ export default class ModalContainer extends React.Component {
                                  </select>
                               </span>
                               <span>
-                                 <select name="dobday[1]">
+                                 <select name="pilot_dob_day">
                                     <option value="">Day</option>
                                     <option value="01">1</option>
                                     <option value="02">2</option>
@@ -395,7 +398,7 @@ export default class ModalContainer extends React.Component {
                                  </select>
                               </span>
                               <span>
-                                 <select name="dobyear[1]">
+                                 <select name="pilot_dob_year">
                                     <option value="">Year</option>
                                     <option value="2019">2019</option>
                                     <option value="2018">2018</option>
@@ -501,8 +504,8 @@ export default class ModalContainer extends React.Component {
                               </span>
                            </li>
                            <li>
-                              <label class="desc">License Type:</label>
-                              <select name="lic[1]" class="select small">
+                              <label class="lbl">License Type:</label>
+                              <select name="pilot_license_type" class="select small">
                                  <option value="Student">Student</option>
                                  <option value="Private">Private</option>
                                  <option value="Commercial">Commercial</option>
@@ -511,89 +514,90 @@ export default class ModalContainer extends React.Component {
                               </select>
                            </li>
                            <li>
-                              <label class="desc">Ratings (Please choose all that apply):</label>
-                              <input name="ifr[1]" type="checkbox" value="instrument" /> IFR
+                              <label class="lbl">Ratings (Please choose all that apply):</label>
+                              <input name="ifr" id="ifr" type="checkbox" value="instrument" /> <label for="ifr">IFR</label>
                            </li>
                            <li>
-                              <input name="sea[1]" type="checkbox" value="sea" /> Sea
+                              <input name="sea" type="checkbox" value="sea" id="sea" /> <label for="sea">Sea</label>
                            </li>
                            <li>
-                              <input name="me[1]" type="checkbox" value="multiengine" /> Multi-engine
+                              <input name="me" type="checkbox" value="multiengine" id="me" /> <label for="me">Multi</label>-engine
                            </li>
                            <li>
-                              <input name="rotor[1]" type="checkbox" value="roto" /> Rotor
+                              <input name="rotor" type="checkbox" value="roto" id="rotor" /> <label for="rotor">Rotor</label>
                            </li>
                            <li>
-                              <input name="cfi[1]" type="checkbox" value="cfi" /> CFI
+                              <input name="cfi" type="checkbox" value="cfi" id="cfi" /> <label for="cfi">CFI</label>
                            </li>
                            <li>
-                              <label class="desc">Any aviation accidents, waivers, violations, losses, incidents, DUI, DWI's?</label>
-                              <input name="accidentsyesno[1]" type="radio" value="Yes" /> Yes
-                              <input name="accidentsyesno[1]" type="radio" value="No" /> No 
+                              <label class="lbl">Any aviation accidents, waivers, violations, losses, incidents, DUI, DWI's?</label>
+                              <input name="accidents_yes_no" type="radio" value="Yes" id="acc_yes" /> <lable for="acc_yes">Yes</lable>
+                              <br/>
+                              <input name="accidents_yes_no" type="radio" value="No" id="acc_no" /> <lable for="acc_no">No</lable> 
                            </li>
                            <li>
-                              <label class="desc">If yes, please advise the detail and remember to include the date of the loss and the amount paid out by the insurance company.</label>
-                              <textarea name="accidents[1]" cols="45" rows="5"></textarea>
+                              <label class="lbl">If yes, please advise the detail and remember to include the date of the loss and the amount paid out by the insurance company.</label>
+                              <textarea name="accidents" cols="45" rows="5"></textarea>
                            </li>
                            <li>
                               &nbsp;
                            </li>
                            
                            <li>
-                              <label class="desc">Total Hours:</label>
-                              <input type="text" name="total[1]" />
+                              <label class="lbl">Total Hours:</label>
+                              <input type="text" name="total_hours" />
                            </li>
                            <li>
-                              <label class="desc">In this model:</label>
-                              <input type="text" name="model[1]" />
+                              <label class="lbl">In this model:</label>
+                              <input type="text" name="model" />
                            </li>
                            <li>
-                              <label class="desc">Retractable Gear:</label>
-                              <input type="text" name="retract[1]" />
+                              <label class="lbl">Retractable Gear:</label>
+                              <input type="text" name="retract" />
                            </li>
                            <li>
-                              <label class="desc">Multi-Engine:</label>
-                              <input type="text" name="meh[1]" />
+                              <label class="lbl">Multi-Engine:</label>
+                              <input type="text" name="multi_engine" />
                            </li>
                            <li>
-                              <label class="desc">Tailwheel:</label>
-                              <input type="text" name="tw[1]" />
+                              <label class="lbl">Tailwheel:</label>
+                              <input type="text" name="tailwheel" />
                            </li>
                            <li>
-                              <label class="desc">Turboprop:</label>
-                              <input type="text" name="tp[1]" />
+                              <label class="lbl">Turboprop:</label>
+                              <input type="text" name="turboprop" />
                            </li>
                            <li>
-                              <label class="desc">Turbine Jet:</label>
-                              <input type="text" name="pj[1]" />
+                              <label class="lbl">Turbine Jet:</label>
+                              <input type="text" name="turbine_jet" />
                            </li>
                            <li>
-                              <label class="desc">Rotor:</label>
-                              <input type="text" name="rot[1]" />
+                              <label class="lbl">Rotor:</label>
+                              <input type="text" name="rotor" />
                            </li>
                            <li>
-                              <label class="desc">Seaplane:</label>
-                              <input type="text" name="seap[1]" />
+                              <label class="lbl">Seaplane:</label>
+                              <input type="text" name="seaplane" />
                            </li>
                            <li>
-                              <label class="desc">Other:</label>
-                              <input type="text" name="otherhours[1]" />
+                              <label class="lbl">Other:</label>
+                              <input type="text" name="otherhours" />
                            </li>
                            <li>
-                              <label class="desc">Last 12 Months:</label>
-                              <input type="text" name="last12[1]" />
+                              <label class="lbl">Last 12 Months:</label>
+                              <input type="text" name="last_12_moths" />
                            </li>
                            <li>
-                              <label class="desc">Last School Attended in the Make and Model?</label>
-                              <input type="text" name="school[1]" />
+                              <label class="lbl">Last School Attended in the Make and Model?</label>
+                              <input type="text" name="school" />
                            </li>
                            <li>
-                              <label class="desc">When?</label>
-                              <input type="text" name="schoolWhen[1]" />
+                              <label class="lbl">When?</label>
+                              <input type="text" name="schoolWhen" />
                            </li>
                            <li>
-                              <label class="desc">Where?</label>
-                              <input type="text" name="schoolWhere[1]" />
+                              <label class="lbl">Where?</label>
+                              <input type="text" name="schoolWhere" />
                            </li>
                            <input type="hidden" name="pilot[]" value="1" />
                         </ul>
@@ -603,33 +607,35 @@ export default class ModalContainer extends React.Component {
                            <h2>Coverages</h2>
                         </li>
                         <li>
-                           <label class="desc">Liability Limits Requested:</label>
+                           <label class="lbl">Liability Limits Requested:</label>
                         </li>
                         <li>
                            <input type="radio" name="coverage" id="radio" value="1/100" />
-                           $1,000,000 Combined Single Limit including $100,000 per passenger
+                           <label for="radio">$1,000,000 Combined Single Limit including $100,000 per passenger</label>
                         </li>
                         <li>
                            <input type="radio" name="coverage" id="radio2" value="1CSL" />
-                           $1,000,000 Combined Single Limit with no passenger limitation
+                           <label for="radi2">$1,000,000 Combined Single Limit with no passenger limitation</label>
                         </li>
                         <li>
                            <input type="radio" name="coverage" id="radio3" value="Other Liability Requested" />
-                           Other (Specify)
+                           <label for="radio3">Other (Specify)</label>
                         </li>
                         <li>
                            &nbsp;
                            <input name="coverageOther" type="text" id="coverageOther" size="50" />
                         </li>
                         <li>
-                           <label class="desc">All pilots above have a valid and effective pilot certificate:</label>
-                           <input type="radio" name="valid" id="radio4" value="All Pilots have a valid pilot certificate" /> Yes
-                           <input type="radio" name="valid" id="radio5" value="NO, Not All Pilots have a valid pilot certificate" /> No
+                           <label class="lbl">All pilots above have a valid and effective pilot certificate:</label>
+                           <input type="radio" name="valid" id="radio4" value="All Pilots have a valid pilot certificate" /> <label for="radio4">Yes</label>
+                           <br/>
+                           <input type="radio" name="valid" id="radio5" value="NO, Not All Pilots have a valid pilot certificate" /> <label for="radio5">No</label>
                         </li>
                         <li>
-                           <label class="desc">Do you own any other aircraft?</label>
-                           <input type="radio" name="own" id="radio7" value="I own another aircraft." /> Yes
-                           <input type="radio" name="own" id="radio6" value="No, I do not own another aircraft."  /> No
+                           <label class="lbl">Do you own any other aircraft?</label>
+                           <input type="radio" name="own" id="radio7" value="I own another aircraft." /> <label for="radio7">Yes</label>
+                           <br/>
+                           <input type="radio" name="own" id="radio6" value="No, I do not own another aircraft."  /> <label for="radio6">No</label>
                         </li>
                         <li>
                         </li>

@@ -10,7 +10,13 @@ export const GridStyled = Grid.extend`
   padding: 81px 0 140px 0;
 `;
 
-
+export const Label = styled.h4`
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  color: rgb(123, 123, 123);
+`;
 
 export const Heading = styled.h2`
   color: ${props => props.theme.colors.blackThree};
@@ -19,10 +25,10 @@ export const Heading = styled.h2`
   font-weight: 700;
   line-height: 1;
   letter-spacing: 1.1px;
-  margin: 60px 0 0 0;
-  padding: 70px 0 28px 0;
+  margin: 10px 0 0 0;
+  padding: 28px 0 28px 0;
   text-transform: uppercase;
-
+  margin-top=0px;
   @media (min-width: ${props => props.theme.flexboxgrid.breakpoints.sm}em) {
     margin-left: 0;
   }

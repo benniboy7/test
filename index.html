@@ -11,267 +11,309 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sunset Aviation</title>
-<style type="text/css">
-  form ul {
-      margin: 0;
-      padding: 0;
-      list-style-type: none
-  }
+  <style type="text/css">
+    form ul {
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+    }
 
-  * html form ul {
-      width: 99%;
-      zoom: 1
-  }
+      * html form ul {
+          width: 99%;
+          zoom: 1;
+      }
+      .ph{
+        text-align: right;
+      }
+      form li {
+          margin: 0;
+          padding: 6px 1% 9px 1%;
+          clear: both;
+          background-color: transparent;
+          position: relative;
+          -webkit-transition: background-color 350ms ease-out;
+          -moz-transition: background-color 350ms ease-out;
+          -o-transition: background-color 350ms ease-out;
+          transition: background-color 350ms ease-out;
+      }
 
-  form li {
-      margin: 0;
-      padding: 6px 1% 9px 1%;
-      clear: both;
-      background-color: transparent;
-      position: relative;
-      -webkit-transition: background-color 350ms ease-out;
-      -moz-transition: background-color 350ms ease-out;
-      -o-transition: background-color 350ms ease-out;
-      transition: background-color 350ms ease-out
-  }
+      form ul:after, form li:after, form li div:after {
+          content: ".";
+          display: block;
+          height: 0;
+          clear: both;
+          visibility: hidden;
+      }
 
-  form ul:after, form li:after, form li div:after {
-      content: ".";
-      display: block;
-      height: 0;
-      clear: both;
-      visibility: hidden
-  }
+      * html form li {
+          height: 1%;
+          margin-bottom: -3px;
+      }
 
-  * html form li {
-      height: 1%;
-      margin-bottom: -3px
-  }
+      * + html form li {
+          height: 1%;
+          margin-bottom: -3px;
+      }
 
-  * + html form li {
-      height: 1%;
-      margin-bottom: -3px
-  }
+      * html form li div {
+          display: inline-block;
+      }
 
-  * html form li div {
-      display: inline-block
-  }
+      * + html form ul, * + html form li div {
+          display: inline-block;
+      }
 
-  * + html form ul, * + html form li div {
-      display: inline-block
-  }
+      form li div {
+          margin: 0;
+          padding: 0;
+          color: #444;
+      }
 
-  form li div {
-      margin: 0;
-      padding: 0;
-      color: #444
-  }
+      form li span {
+          margin: 0 .3em 0 0;
+          padding: 0;
+          float: left;
+          color: #444;
+      }
 
-  form li span {
-      margin: 0 .3em 0 0;
-      padding: 0;
-      float: left;
-      color: #444
-  }
+      form li div span {
+          margin: 0;
+          display: block;
+          width: 100%;
+          float: left;
+      }
 
-  form li div span {
-      margin: 0;
-      display: block;
-      width: 100%;
-      float: left
-  }
+      form li span.dollar {
+          width:60%;
+      }
 
-  form li span.dollar {
-      width:60%;
-  }
+      li.twoColumns div span {
+          width: 48%;
+          margin: 0 5px 0 0;
+      }
 
-  li.twoColumns div span {
-      width: 48%;
-      margin: 0 5px 0 0
-  }
+      li.threeColumns div span {
+          width: 30%;
+          margin: 0 5px 0 0;
+      }
 
-  li.threeColumns div span {
-      width: 30%;
-      margin: 0 5px 0 0
-  }
+      li.notStacked div span {
+          width: auto;
+          margin: 0 7px 0 0;
+      }
 
-  li.notStacked div span {
-      width: auto;
-      margin: 0 7px 0 0
-  }
+      label span, .section span, p span {
+          display: inline !important;
+          float: none !important;
+      }
 
-  label span, .section span, p span {
-      display: inline !important;
-      float: none !important
-  }
+      form li div label, form li span label {
+          margin: 0;
+          padding-top: 3px;
+          clear: both;
+          font-size: 85%;
+          line-height: 160%;
+          color: #444;
+          display: block;
+      }
 
-  form li div label, form li span label {
-      margin: 0;
-      padding-top: 3px;
-      clear: both;
-      font-size: 85%;
-      line-height: 160%;
-      color: #444;
-      display: block
-  }
+      fieldset {
+          display: block;
+          border: none;
+          margin: 0;
+          padding: 0;
+      }
 
-  fieldset {
-      display: block;
-      border: none;
-      margin: 0;
-      padding: 0
-  }
+      label.lbl, legend.lbl {
+          font-size: 95%;
+          font-weight: bold;
+          color: #222;
+          line-height: 150%;
+          margin: 0;
+          padding: 0 0 3px 0;
+          border: none;
+          display: block;
+          white-space: normal;
+          width: 100%;
+      }
 
-  label.desc, legend.desc {
-      font-size: 95%;
-      font-weight: bold;
-      color: #222;
-      line-height: 150%;
-      margin: 0;
-      padding: 0 0 3px 0;
-      border: none;
-      display: block;
-      white-space: normal;
-      width: 100%
-  }
+      label.choice {
+          display: block;
+          cursor: pointer;
+          font-size: 100%;
+          line-height: 150%;
+          margin: -17px 0 0 23px;
+          padding: 0 0 5px 0;
+          color: #222;
+          width: 88%;
+      }
 
-  label.choice {
-      display: block;
-      cursor: pointer;
-      font-size: 100%;
-      line-height: 150%;
-      margin: -17px 0 0 23px;
-      padding: 0 0 5px 0;
-      color: #222;
-      width: 88%
-  }
+      span.symbol {
+          font-size: 120%;
+          line-height: 135%
+      }
 
-  span.symbol {
-      font-size: 120%;
-      line-height: 135%
-  }
+      textarea.textarea, select.select {
+          padding-top: 2px;
+          padding-bottom: 2px;
+      }
 
-  textarea.textarea, select.select {
-      padding-top: 2px;
-      padding-bottom: 2px;
-  }
+      input.text, textarea.textarea {
+          border: 1px solid #c8c8c8;
+          box-shadow: none;
+      }
 
-  input.text, textarea.textarea {
-      border: 1px solid #c8c8c8;
-      box-shadow: none;
-  }
+      select.select {
+          padding: 1px 0 0 0;
+      }
 
-  select.select {
-      padding: 1px 0 0 0
-  }
+      input.checkbox, input.radio {
+          display: block;
+          margin: 4px 0 0 0;
+          padding: 0;
+          width: 13px;
+          height: 13px;
+      }
 
-  input.checkbox, input.radio {
-      display: block;
-      margin: 4px 0 0 0;
-      padding: 0;
-      width: 13px;
-      height: 13px
-  }
+      input.other {
+          margin: 0 0 8px 25px;
+      }
 
-  input.other {
-      margin: 0 0 8px 25px
-  }
+      * html select.select {
+          margin: 1px 0;
+      }
 
-  * html select.select {
-      margin: 1px 0
-  }
+      * + html select.select {
+          margin: 1px 0;
+      }
 
-  * + html select.select {
-      margin: 1px 0
-  }
+      form li.name span label,
+      form li.date input.text,
+      form li.date span label {
+          text-align: center;
+      }
 
-  form li.name span label,
-  form li.date input.text,
-  form li.date span label {
-      text-align: center
-  }
+      input.small, select.small {
+          width: 25%;
+      }
 
-  input.small, select.small {
-      width: 25%
-  }
+      select.small, select.medium {
+              padding: 7px;
+      }  
+      input.medium, select.medium {
+          width: 50%;
+      }
 
-  input.medium, select.medium {
-      width: 50%
-  }
+      input.large, select.large {
+          width: 100%;
+      }
 
-  input.large, select.large {
-      width: 100%
-  }
+      textarea.textarea {
+          width: 293px;
+          min-width: 100%;
+          max-width: 100%;
+      }
 
-  textarea.textarea {
-      width: 293px;
-      min-width: 100%;
-      max-width: 100%
-  }
+      textarea.small {
+          height: 5.5em;
+      }
 
-  textarea.small {
-      height: 5.5em
-  }
+      textarea.medium {
+          height: 10em;
+      }
 
-  textarea.medium {
-      height: 10em
-  }
+      textarea.large {
+          height: 20em;
+      }
 
-  textarea.large {
-      height: 20em
-  }
+      form li.section {
+          clear: both;
+          margin: 0;
+          padding: 7px 0 0 0;
+          width: auto !important;
+          position: static;
+      }
 
-  form li.section {
-      clear: both;
-      margin: 0;
-      padding: 7px 0 0 0;
-      width: auto !important;
-      position: static
-  }
+      form li.section h3 {
+          font-weight: normal;
+          font-size: 110%;
+          line-height: 135%;
+          margin: 0 0 3px 0;
+          width: auto;
+          padding: 12px 1% 0 1%;
+          border-top: 1px dotted #ccc;
+      }
 
-  form li.section h3 {
-      font-weight: normal;
-      font-size: 110%;
-      line-height: 135%;
-      margin: 0 0 3px 0;
-      width: auto;
-      padding: 12px 1% 0 1%;
-      border-top: 1px dotted #ccc
-  }
+      form li.first {
+          padding: 0;
+      }
 
-  form li.first {
-      padding: 0
-  }
+      form li.first h3 {
+          padding: 8px 1% 0 1%;
+          border-top: none !important;
+      }
 
-  form li.first h3 {
-      padding: 8px 1% 0 1%;
-      border-top: none !important
-  }
-
-  form li.section div {
-      display: block;
-      width: auto;
-      float: none;
-      font-size: 85%;
-      line-height: 160%;
-      margin: 0 0 1em 0;
-      padding: 0 1% 0 1%
-  }
-  form input, form select{
-    padding: 7px;
-  }
-</style>
+      form li.section div {
+          display: block;
+          width: auto;
+          float: none;
+          font-size: 85%;
+          line-height: 160%;
+          margin: 0 0 1em 0;
+          padding: 0 1% 0 1%;
+      }
+      form input, form select{
+        padding: 7px;
+      }
+      #button{
+        align-items: center;
+        color: rgb(255, 255, 255);
+        display: flex;
+        font-family: Breuer;
+        font-size: 16px;
+        font-weight: 700;
+        height: 48px;
+        -webkit-box-pack: center;
+        justify-content: center;
+        letter-spacing: 1.1px;
+        position: relative;
+        text-transform: uppercase;
+        white-space: nowrap;
+        width: 200px;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px 0px;
+        background: rgb(241, 200, 74);
+        border-width: 0px;
+        border-style: initial;
+        border-color: initial;
+        border-image: initial;
+        margin-left: 103px;
+      }
+      .checkLable{
+        display: inline-block;
+      }
+      .dlr{
+        font-weight: bold;
+        margin-left:-14px;
+        margin-top: 7px;
+      }
+      form input[type='checkbox'], form input[type='radio']{
+        margin-right: 3px;
+      }
+      .age-dob{
+        margin-top: 7px;
+      }
+  </style>
 </head>
 <body>
 
   <form name="contact" netlify netlify-honeypot="bot-field" hidden>
     <input type="hidden" name="form-name" value="contact" />
-           <input name="owner" type="text" class="text medium"/>
-           <input type="text" name="ofname" />
-           <input type="text" name="olname"/>         
-           <input name="add" type="text" id="add" size="50"/>
-          <label class="desc">City</label>
-              <select name="state" id="state">
+           <input name="owner" type="text"/>
+           <input type="text" name="first_name" />
+           <input type="text" name="last_name"/>         
+           <input name="street_address" type="text" size="50"/>
+          <label>City</label>
+              <select name="state">
                  <option value="AL">AL</option>
                  <option value="AK">AK</option>
                  <option value="AZ">AZ</option>
@@ -324,16 +366,16 @@
                  <option value="WI">WI</option>
                  <option value="WY">WY</option>
               </select>
-           <input type="text" name="zip" id="zip" />
-           <input type="text" name="wphone" id="wphone" />
-           <input type="text" name="hphone" id="hphone" />
-           <input type="text" name="email" id="email" />
+           <input type="text" name="zip" />
+           <input type="text" name="work_phone" />
+           <input type="text" name="home_phone" />
+           <input type="text" name="email" />
            </span>
-           <input type="text" name="fax" id="fax" />
-           <input name="hear" type="text" id="hear" size="50" />
-           <input name="occ" type="text" id="occ" size="50" />
-           <input name="ins" type="text" id="ins" size="50" />
-              <select name="edmonth">
+           <input type="text" name="fax" />
+           <input name="hear" type="text" size="50" />
+           <input name="occupation" type="text" size="50" />
+           <input name="insurance" type="text" size="50" />
+              <select name="expiry_date_month">
                  <option value="00"></option>
                  <option value="01">1 - January</option>
                  <option value="02">2 - February</option>
@@ -349,7 +391,7 @@
                  <option value="12">12 - December</option>
               </select>
 
-              <select name="edday">
+              <select name="expiry_date_day">
                  <option value="00"></option>
                  <option value="01">1</option>
                  <option value="02">2</option>
@@ -384,7 +426,7 @@
                  <option value="31">31</option>
               </select>
 
-              <select name="edyear">
+              <select name="expiry_date_day">
                  <option value="0000"></option>
                  <option value="2019">2019</option>
                  <option value="2020">2020</option>
@@ -400,36 +442,36 @@
 
            <input name="newPurchase" type="checkbox" value="Yes" /> 
 
-           <input name="aopa" type="text" id="aopa" size="20" />
+           <input name="aopa_member" type="text" size="20" />
          
-         <input name="eaa" type="text" id="eaa" size="20" />
-          <input type="text" name="n" id="n" />
-           <input type="text" name="year" id="year"/>
-           <input type="text" name="make" id="make" />
+         <input name="eaa_member" type="text" size="20" />
+          <input type="text" name="n" />
+           <input type="text" name="year"/>
+           <input type="text" name="make" />
            <input type="text" name="amodel" />
-           <input type="text" name="seats" id="seats" />
-            <input type="text" name="value" id="value" />
-           <input name="id" type="text" id="id" size="10" />
-           <input name="airport" type="text" id="airport" size="50" />
-           <input type="radio" name="store" id="store" value="hangar" />
-           <input type="radio" name="store" id="store2" value="tied" />
+           <input type="text" name="total_seats" />
+            <input type="text" name="value" />
+           <input name="base_airport_identifier" type="text" size="10" />
+           <input name="base_airport_name" type="text" size="50" />
+           <input type="radio" name="store" value="hangar" />
+           <input type="radio" name="store" value="tied" />
          
-         <select name="use" class="select medium">
+         <select name="use">
               <option value=""></option>
               <option value="Personal Pleasure and Business / Non Commercial">Personal Pleasure and Business / Non Commercial</option>
               <option value="Other">Other (Please advise details in the Comments section below)</option>
            </select>
          
-           <input type="text" name="lien" id="lien" />
+           <input type="text" name="lienholder" />
          
-         <input type="text" name="loan" id="loan" />
-         <input type="radio" name="float" id="float" value="Yes" />
-        <input type="radio" name="float" id="float" value="No" />
-          <input type="text" name="fname[1]" />
-              <input type="text" name="lname[1]" />
-          <input type="text" name="age[1]" />
+         <input type="text" name="loan" />
+         <input type="radio" name="float" value="Yes" />
+        <input type="radio" name="float" value="No" />
+          <input type="text" name="pilot_fname" />
+              <input type="text" name="pilot_lname" />
+          <input type="text" name="pilot_age" />
             
-                 <select name="dobmonth[1]">
+                 <select name="pilot_dob_month">
                     <option value="">Month</option>
                     <option value="01">1 - January</option>
                     <option value="02">2 - February</option>
@@ -445,7 +487,7 @@
                     <option value="12">12 - December</option>
                  </select>
 
-                 <select name="dobday[1]">
+                 <select name="pilot_dob_day">
                     <option value="">Day</option>
                     <option value="01">1</option>
                     <option value="02">2</option>
@@ -480,7 +522,7 @@
                     <option value="31">31</option>
                  </select>
 
-                 <select name="dobyear[1]">
+                 <select name="pilot_dob_year">
                     <option value="">Year</option>
                     <option value="2019">2019</option>
                     <option value="2018">2018</option>
@@ -584,7 +626,7 @@
                     <option value="1920">1920</option>
                  </select>
 
-              <select name="lic[1]" class="select small">
+              <select name="pilot_license_type">
                  <option value="Student">Student</option>
                  <option value="Private">Private</option>
                  <option value="Commercial">Commercial</option>
@@ -593,67 +635,67 @@
               </select>
             
             
-              <input name="ifr[1]" type="checkbox" value="instrument" />
+              <input name="ifr" type="checkbox" value="instrument" />
                         
-              <input name="sea[1]" type="checkbox" value="sea" />
+              <input name="sea" type="checkbox" value="sea" />
             
-              <input name="me[1]" type="checkbox" value="multiengine" />
+              <input name="me" type="checkbox" value="multiengine" />
             
-              <input name="rotor[1]" type="checkbox" value="roto" /> 
-            
-            
-              <input name="cfi[1]" type="checkbox" value="cfi" /> CFI
-            
-              <input name="accidentsyesno[1]" type="radio" value="Yes" />
-              <input name="accidentsyesno[1]" type="radio" value="No" /> 
+              <input name="rotor" type="checkbox" value="roto" /> 
             
             
-              <textarea name="accidents[1]" cols="45" rows="5"></textarea>
+              <input name="cfi" type="checkbox" value="cfi" /> CFI
             
-              <input type="text" name="total[1]" />
+              <input name="accidents_yes_no" type="radio" value="Yes" />
+              <input name="accidents_yes_no" type="radio" value="No" /> 
             
-              <input type="text" name="model[1]" />
             
-              <input type="text" name="retract[1]" />
+              <textarea name="accidents" cols="45" rows="5"></textarea>
             
-              <input type="text" name="meh[1]" />
+              <input type="text" name="total_hours" />
             
-              <input type="text" name="tw[1]" />
+              <input type="text" name="model" />
             
-            <input type="text" name="tp[1]" />
-              <input type="text" name="pj[1]" />
+              <input type="text" name="retract" />
             
-              <input type="text" name="rot[1]" />
+              <input type="text" name="multi_engine" />
             
-              <input type="text" name="seap[1]" />
-              <input type="text" name="otherhours[1]" />
-              <input type="text" name="last12[1]" />
-              <input type="text" name="school[1]" />
+              <input type="text" name="tailwheel" />
             
-              <input type="text" name="schoolWhen[1]" />
+            <input type="text" name="turboprop" />
+              <input type="text" name="turbine_jet" />
             
-              <input type="text" name="schoolWhere[1]" />
+              <input type="text" name="rotor" />
+            
+              <input type="text" name="seaplane" />
+              <input type="text" name="otherhours" />
+              <input type="text" name="last_12_moths" />
+              <input type="text" name="school" />
+            
+              <input type="text" name="schoolWhen" />
+            
+              <input type="text" name="schoolWhere" />
             
            <input type="hidden" name="pilot[]" value="1" />
          
-           <input type="radio" name="coverage" id="radio" value="1/100" />
+           <input type="radio" name="coverage" value="1/100" />
          
-           <input type="radio" name="coverage" id="radio2" value="1CSL" />
-         
-         
-           <input type="radio" name="coverage" id="radio3" value="Other Liability Requested" />
-         
-           <input name="coverageOther" type="text" id="coverageOther" size="50" />
+           <input type="radio" name="coverage" value="1CSL" />
          
          
-           <input type="radio" name="valid" id="radio4" value="All Pilots have a valid pilot certificate" />
-           <input type="radio" name="valid" id="radio5" value="NO, Not All Pilots have a valid pilot certificate" />
+           <input type="radio" name="coverage" value="Other Liability Requested" />
+         
+           <input name="coverageOther" type="text" size="50" />
          
          
-           <input type="radio" name="own" id="radio7" value="I own another aircraft." />
-           <input type="radio" name="own" id="radio6" value="No, I do not own another aircraft."  />
+           <input type="radio" name="valid" value="All Pilots have a valid pilot certificate" />
+           <input type="radio" name="valid" value="NO, Not All Pilots have a valid pilot certificate" />
          
-           <textarea name="comments" id="comments" cols="45" rows="5"></textarea>
+         
+           <input type="radio" name="own" value="I own another aircraft." />
+           <input type="radio" name="own" value="No, I do not own another aircraft."  />
+         
+           <textarea name="comments" cols="45" rows="5"></textarea>
   </form>
 
 <!-- Google Tag Manager (noscript) -->
