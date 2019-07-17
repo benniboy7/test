@@ -54,7 +54,7 @@ export default class ModalContainer extends React.Component {
                         <li>
                            <label class="lbl">Name:</label>
                            <span>
-                           <input type="text" name="firstname" />
+                           <input type="text" name="first_name" />
                            <label class="lbl">First</label>
                            </span>
                            <span>
