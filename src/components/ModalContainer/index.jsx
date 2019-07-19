@@ -43,7 +43,7 @@ export default class ModalContainer extends React.Component {
                   <CloseButton onClick={onClose}>
                     <CloseIconStyled />
                   </CloseButton>
-         
+                  {children}
                 </Content>
               </Col>
             </Row>
