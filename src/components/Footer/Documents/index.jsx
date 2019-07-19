@@ -4,10 +4,6 @@ import { Label, ListItemStyled, Select } from './styled';
 
 import BrochurePdf from './pdf/Brochure.pdf';
 import OneSheetPdf from './pdf/OneSheet.pdf';
-import PilotHistoryFormPdf from './pdf/PilotHistoryFormPdf.pdf';
-import AircraftApplicationPdf from './pdf/AircraftApplicationPdf.pdf';
-import AviationProductsLiabilityApplicationPdf from './pdf/AviationProductsLiabilityApplicationPdf.pdf';
-import AirportLiabilityApplicationPdf from './pdf/AirportLiabilityApplicationPdf.pdf';
 
 export const DOCUMENTS = [
   {
@@ -20,26 +16,6 @@ export const DOCUMENTS = [
     title: 'One Sheet',
     pdf: OneSheetPdf,
   },
-  {
-    id: 3,
-    title: 'Pilot History Form',
-    pdf: PilotHistoryFormPdf,
-  },
-  {
-    id: 4,
-    title: 'Aircraft Application',
-    pdf: AircraftApplicationPdf,
-  },
-  {
-    id: 5,
-    title: 'Aviation Products Liability Application',
-    pdf: AviationProductsLiabilityApplicationPdf,
-  },
-  {
-    id: 6,
-    title: 'Airport Liability Application',
-    pdf: AirportLiabilityApplicationPdf,
-  },    
 ];
 
 export default class Documents extends React.Component {
