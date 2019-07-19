@@ -23,6 +23,7 @@ export const Container = styled.div`
   top: 0;
   width: 100%;
   z-index: 3;
+  background: #f8f8f8;
 `;
 
 export const Content = styled.div`
