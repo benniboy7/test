@@ -63,7 +63,7 @@ export default function App() {
           <Header />
           <Switch>
             <Route path={`/:type(${typesRegex})`} component={Type} />
-            <Route path="/:scroll(about|services|testimonials)" component={Index} />
+            <Route path="/:scroll(about|services|testimonials|contact)" component={Index} />
             <Route path="/" component={Index} />
           </Switch>
           <Footer />

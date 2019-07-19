@@ -8,6 +8,7 @@ import Founder from './Founder';
 import Partners from './Partners';
 import Services from './Services';
 import Testimonials from './Testimonials';
+import Contact from './Contact';
 import Video from './Video';
 import VideoModal from './VideoModal';
 
@@ -47,13 +48,14 @@ export default class Index extends React.Component {
     return (
       <section>
         <Cover innerRef={c => (this.componentRefs.cover = c)} />
+        <Testimonials innerRef={c => (this.componentRefs.testimonials = c)} />
         <Founder innerRef={c => (this.componentRefs.about = c)} />
         <Partners />
         <Services innerRef={c => (this.componentRefs.services = c)} />
         <LearnMore first="rightTop" second="leftBottom" />
         <Types />
         <Video />
-        <Testimonials innerRef={c => (this.componentRefs.testimonials = c)} />
+        <Contact innerRef={c => (this.componentRefs.contactus = c)} />
         <LearnMore first="leftTop" second="none" />
         <Route path="/video" component={VideoModal} />
       </section>

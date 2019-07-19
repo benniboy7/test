@@ -64,6 +64,7 @@ export default class Header extends React.Component {
                     </option>
                   ))}
                 </optgroup>
+                <option value="/contactus">Contact Us</option>
               </Select>
             </HamburgerButton>
             <LogoLink to="/">
@@ -95,13 +96,17 @@ export default class Header extends React.Component {
                     </Select>
                   </NavListLabel>
                 </NavListItem>
+
+                <NavListItem>
+                  <NavListLink to="/contactus">Contact Us</NavListLink>
+                </NavListItem>
+
                 <NavListItem>
                   <CallButtonStyled />
                 </NavListItem>
               </NavList>
             </Navigation>
             <QuoteButtonStyled framePosition="right" />
-            <CallButtonStyled />
           </Inner>
         </Grid>
       </Container>

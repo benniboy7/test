@@ -20,7 +20,8 @@ export default class VideoModal extends React.Component {
     return (
       <ModalContainer col={{ xs: 12, md: 10, mdOffset: 1 }} onClose={this.handleClose}>
         <EmbedContainer>
-          <Embed src={process.env.VIDEO_EMBED_URL} allowFullScreen />
+          {/*<Embed src={process.env.VIDEO_EMBED_URL} allowFullScreen />*/}
+          <Embed src="https://www.youtube.com/embed/B3Ml1tR2nLM?rel=0&showinfo=0&autoplay=1" allowFullScreen />
         </EmbedContainer>
       </ModalContainer>
     );

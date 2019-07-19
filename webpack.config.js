@@ -10,9 +10,9 @@ const config = {
   entry: ['@babel/polyfill', 'react-hot-loader/patch', './src/index'],
 
   devServer: {
-    hot: true,
+    hot: false,
     port: 5000,
-    inline: true,
+    inline: false,
     host: '0.0.0.0',
     index: 'index.html',
     contentBase: path.resolve('./src'),
