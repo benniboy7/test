@@ -29,10 +29,9 @@ export const Inner = styled.div`
 
 export const CallButtonStyled = styled(CallButton)`
   margin: auto 0;
-    margin-top: 10px;
 
   @media (min-width: ${props => props.theme.flexboxgrid.breakpoints.sm}em) {
-    // display: none;
+    display: none;
     margin: 0 14px;
   }
 `;
